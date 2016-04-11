@@ -20,6 +20,7 @@ class Base extends CI_Controller {
 			// Faz o download do arquivo comprimido
 			$this->zip->download('meu_texto.zip');
 		}else{
+			// Define a mensagem de erro a ser exibida para o usuário
 			$this->session->set_flashdata('error','Não foi possível gerar o arquivo comprimido.');
 			redirect();
 		}
@@ -32,6 +33,7 @@ class Base extends CI_Controller {
 			// Faz o download do arquivo comprimido
 			$this->zip->download('meus_arquivos.zip');
 		}else{
+			// Define a mensagem de erro a ser exibida para o usuário
 			$this->session->set_flashdata('error','Não foi possível gerar o arquivo comprimido.');
 			redirect();
 		}
